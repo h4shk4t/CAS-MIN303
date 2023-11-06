@@ -23,15 +23,21 @@
     <container class="AllCompanies">
         {% for card in data %}
         <div class="card">
-            <h3 class="element">{{ card.Name }}</h3>
-            <p class="element">Advisor: {{ card.Advisor }}</p>
-            <p class="element">Folio No: {{ card.FolioNo }}</p>
-            <p class="element">Scheme Name: {{ card.SchemeName }}</p>
-            <p class="element">Quantity: {{ card.Quantity }}</p>
-            <p class="element">Amount: ₹{{ card.Amount }}</p>
-            <p class="element">Price: ₹{{ card.Price }}</p>
-            <p class="element">Date of Investment: {{ card.DateOfInvestment }}</p>
-            <p class="element">Current Value: {{ card.CurrentValue }}</p>
+            <div class="part">
+                <h3 class="element">{{ card.Name }}</h3>
+                <p class="element">Advisor: {{ card.Advisor }}</p>
+                <p class="element">Folio No: {{ card.FolioNo }}</p>
+            </div>
+            <div class="part">
+                <p class="element">Scheme Name: {{ card.SchemeName }}</p>
+                <p class="element">Quantity: {{ card.Quantity }}</p>
+                <p class="element">Amount: ₹{{ card.Amount }}</p>
+            </div>
+            <div class="part">
+                <p class="element">Price: ₹{{ card.Price }}</p>
+                <p class="element">Date of Investment: {{ card.DateOfInvestment }}</p>
+                <p class="element">Current Value: {{ card.CurrentValue }}</p>
+            </div>
         </div>
         {% endfor %}
     </container>

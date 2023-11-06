@@ -37,13 +37,23 @@ body
     height: 14vh;
     width: 80vw;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     background-color: aqua;
     margin: 1vh;
     padding: 1vh;
     border-radius: 1vh;
+}
+
+.part
+{
+    height: 14vh;
+    width: 26.666vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .element
