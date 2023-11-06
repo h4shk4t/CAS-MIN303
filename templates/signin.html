@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Login with mongodb flask</title>
+  <title>WealthTrack</title>
 
   <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
@@ -10,25 +10,15 @@
 </head>
 
 <body>
-  <a href="main"> <button id="homebtn" type="button" href="main" >Home</button> </a>
+  <!-- <a href="main"> <button id="homebtn" type="button" href="main" >Home</button> </a> -->
 <div class="container">
-      <h1>Enter your Details</h1>
-      <form class="form-signin" action="/index" method="post">
-        <input type="text" name="username" id="inputName" class="form-control" placeholder="Name" required autofocus>      
-      </form>
-      <form>
-        <input type="text" name="password" id="inputPassword" class="form-control" placeholder="Email" required>
-      </form>
-      <form class="form-signin" action="/index" method="post">
-        <input type="text" name="username" id="inputName" class="form-control" placeholder="PanCard" required autofocus>      
-      </form>
-      <form>
+      <h1 class="details">Enter your Details</h1>
+      <form class="form-signin" action="/signin" method="post">
+        <input type="text" name="name" id="inputName" class="form-control" placeholder="Name" required autofocus>      
+        <input type="text" name="email" id="inputPassword" class="form-control" placeholder="Email" required>
+        <input type="text" name="pan_no" id="inputName" class="form-control" placeholder="PanCard" required autofocus>      
         <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
-      </form>
-      <form class="form-signin" action="/index" method="post">
-        <input type="text" name="username" id="inputName" class="form-control" placeholder="Account No." required autofocus>      
-      </form>
-      <a href="/view"> <button id="btnSignUp" type="button" href="/view" >Login</button> </a>
+      <input type="submit" id="btnSignUp" placeholder="Login"> 
 </div>
 </body>
 </html>
