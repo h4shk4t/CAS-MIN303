@@ -1,3 +1,30 @@
+body
+{
+    padding: 0;
+    margin: 0;
+}
+.headofpage
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.idcard
+{
+    margin-top: 3vh;
+    margin-left: 10vw;
+}
+
+.danda
+{
+    height: 3vh;
+    width: 100%;
+    background-color: blueviolet;
+    margin: 0;
+    padding: 0;
+}
+
 .AllCompanies
 {
     display: flex;  

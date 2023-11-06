@@ -66,7 +66,7 @@ def view():
         password = request.form['password']
         fetch_cas(email, pan_no, "31/09/2023", "31/10/2023", password)
 
-    return render_template('view.html', data=temporary_cas_data)
+    return render_template('view.html', name=request.form['name'] , pan_no=pan_no , email=email ,data=temporary_cas_data)
 
 if __name__ == "__main__":
     app.run(debug=True)

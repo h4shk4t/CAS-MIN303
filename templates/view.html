@@ -7,7 +7,19 @@
     <link href="../static/view.css" rel="stylesheet">
 </head>
 <body>
-    <header></header>
+    <header class="headofpage">
+        <div class="idcard">
+            <p class="element"> {{ name }} </p>
+            <p class="element"> {{ pan_no }} </p>
+            <p class="element"> {{ email }} </p>
+        </div>
+
+        <img src="../static/logo.png">
+
+    </header>
+
+    <div class="danda"> </div>
+
     <container class="AllCompanies">
         {% for card in data %}
         <div class="card">
