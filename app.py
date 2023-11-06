@@ -56,6 +56,12 @@ def signin():
 
     return render_template('signin.html')
 
+@app.route('/view')
+def view():
+    if 'username' in session:
+        return render_template('view.html', username=session['username'])
+
+    return render_template('view.html')
 
 @app.route('/logout')
 def logout():
