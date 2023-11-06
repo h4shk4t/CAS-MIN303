@@ -3,19 +3,15 @@ from flask_pymongo import PyMongo
 import bcrypt
 import requests
 import casparser
+import json
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'testing'
 
-app.config['MONGO_dbname'] = 'users'
-app.config['MONGO_URI'] = 'mongodb://localhost:27017/users'
 
-temporary_cas_data = [
-    {"name": "Stock A", "symbol": "STK-A", "price": 100.00},
-    {"name": "Stock B", "symbol": "STK-B", "price": 150.50}
-]
-
-mongo = PyMongo(app)
+with open('data.json', 'r') as openfile: 
+    temporary_cas_data = json.load(openfile)["data"]
+ 
 
 @app.route("/")
 @app.route("/main")
@@ -56,36 +52,20 @@ def parse_cas():
 
 @app.route('/index')
 def index():
-    if 'username' in session:
-        return render_template('index.html', username=session['username'])
-
     return render_template('index.html')
 
-@app.route('/signin', methods=['GET', 'POST'])
+@app.route('/signin')
 def signin():
+    return render_template('signin.html')
+
+@app.route('/view', methods=['GET', 'POST'])
+def view():
     if request.method == 'POST':
         email = request.form['email']
         pan_no = request.form['pan_no']
         password = request.form['password']
         fetch_cas(email, pan_no, "31/09/2023", "31/10/2023", password)
-        users = mongo.db.users
-        signin_user = users.find_one({'username': request.form['email']})
 
-        if signin_user:
-            if bcrypt.hashpw(request.form['password'].encode('utf-8'), signin_user['password'].encode('utf-8')) == \
-                    signin_user['password'].encode('utf-8'):
-                session['username'] = request.form['username']
-                return redirect(url_for('index'))
-
-        flash('Username and password combination is wrong')
-        return render_template('signin.html')
-
-    return render_template('signin.html')
-
-@app.route('/view')
-def view():
-    username = request.args.get("user")
-    user = mongo.db.users.find_one({'username': username})
     return render_template('view.html', data=temporary_cas_data)
 
 if __name__ == "__main__":

@@ -1,0 +1,83 @@
+{
+    "data":[
+        {
+            "Name": "HDFC Mutual Fund",
+            "Advisor": "ARN33751",
+            "FolioNo": "BANKNIEFTY2270733200PE",
+            "SchemeName": "ICICI Prudential Bluechip Fund Direct Plan",
+            "Quantity": 50,
+            "Amount": 341.05,
+            "Price": 17052.50,
+            "DateOfInvestment": "19/08/2023",
+            "CurrentValue": 1025245.50
+        },
+        {
+            "Name": "SBI Mutual Fund",
+            "Advisor": "ARN99423",
+            "FolioNo": "RELIANCEGOLD2291736288PE",
+            "SchemeName": "SBI Bluechip Fund",
+            "Quantity": 30,
+            "Amount": 502.25,
+            "Price": 15067.50,
+            "DateOfInvestment": "23/07/2023",
+            "CurrentValue": 756750.00
+        },
+        {
+            "Name": "Axis Mutual Fund",
+            "Advisor": "ARN77312",
+            "FolioNo": "ICICIPRULIFE2278635200PE",
+            "SchemeName": "Axis Long Term Equity Fund",
+            "Quantity": 75,
+            "Amount": 628.10,
+            "Price": 47107.50,
+            "DateOfInvestment": "05/09/2023",
+            "CurrentValue": 3533562.50
+        },
+        {
+            "Name": "Aditya Birla Sun Life Mutual Fund",
+            "Advisor": "ARN55201",
+            "FolioNo": "HDFCBANK2270633200PE",
+            "SchemeName": "Aditya Birla Sun Life Frontline Equity Fund",
+            "Quantity": 40,
+            "Amount": 210.50,
+            "Price": 8420.00,
+            "DateOfInvestment": "12/10/2023",
+            "CurrentValue": 336800.00
+        },
+        {
+            "Name": "Kotak Mahindra Mutual Fund",
+            "Advisor": "ARN66123",
+            "FolioNo": "HDFCERGO2290838288PE",
+            "SchemeName": "Kotak Standard Multicap Fund",
+            "Quantity": 65,
+            "Amount": 430.75,
+            "Price": 27993.75,
+            "DateOfInvestment": "30/11/2023",
+            "CurrentValue": 1819593.75
+        },
+        {
+            "Name": "Reliance Mutual Fund",
+            "Advisor": "ARN44231",
+            "FolioNo": "TATAMOTORS2276231200PE",
+            "SchemeName": "Reliance Small Cap Fund",
+            "Quantity": 80,
+            "Amount": 180.25,
+            "Price": 14420.00,
+            "DateOfInvestment": "18/12/2023",
+            "CurrentValue": 1153600.00
+        },
+        {
+            "Name": "Franklin Templeton Mutual Fund",
+            "Advisor": "ARN33121",
+            "FolioNo": "MARUTI2279234200PE",
+            "SchemeName": "Franklin India Prima Fund",
+            "Quantity": 55,
+            "Amount": 320.35,
+            "Price": 17619.25,
+            "DateOfInvestment": "25/01/2023",
+            "CurrentValue": 969057.50
+        }
+    ]
+    
+    
+}
