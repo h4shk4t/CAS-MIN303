@@ -1,0 +1,17 @@
+body
+{
+  width: 90vw;
+  height: 80vh;
+  background: #797979;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container
+{
+  height: 60vh;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 5vw;
+}

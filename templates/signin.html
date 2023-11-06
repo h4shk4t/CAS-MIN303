@@ -5,48 +5,30 @@
 
   <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
-  <link href="../static/signup.css" rel="stylesheet">
+  <link href="../static/signin.css" rel="stylesheet">
 
 </head>
 
 <body>
 
 <div class="container">
-  <div class="header">
-    <nav>
-      <ul class="nav nav-pills pull-right">
-        <li role="presentation" ><a href="main">Home</a></li>
-        <li role="presentation" class="active"><a href="#">Sign In</a></li>
-        <li role="presentation"><a href="/signup">Sign Up</a></li>
-      </ul>
-    </nav>
-    <h3 class="text-muted">Login with mongodb flask</h3>
-  </div>
-
-  <div class="jumbotron">
-    <h1>Login</h1>
-    {% with messages = get_flashed_messages() %}
-    {% if messages %}
-    <ul class=flashes>
-      {% for message in messages %}
-      <li>{{ message }}</li>
-      {% endfor %}
-    </ul>
-    {% endif %}
-    {% endwith %}
-    <form class="form-signin" action="/signin" method="post">
-      <label for="inputName" class="sr-only">Username</label>
-      <input type="name" name="username" id="inputName" class="form-control" placeholder="Username" required autofocus>
-      <label for="inputPassword" class="sr-only">Password</label>
-      <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
-      <button id="btnSignUp" class="btn btn-lg btn-primary btn-block" onclick = 'this.form.submit();' type="button">Login</button>
-    </form>
-  </div>
-
-  <footer class="footer">
-    <p>&copy; 2017</p>
-  </footer>
-
+      <h1>Enter your Details</h1>
+      <form class="form-signin" action="/index" method="post">
+        <input type="text" name="username" id="inputName" class="form-control" placeholder="Name" required autofocus>      
+      </form>
+      <form>
+        <input type="text" name="password" id="inputPassword" class="form-control" placeholder="Email" required>
+      </form>
+      <form class="form-signin" action="/index" method="post">
+        <input type="text" name="username" id="inputName" class="form-control" placeholder="PanCard" required autofocus>      
+      </form>
+      <form>
+        <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+      </form>
+      <form class="form-signin" action="/index" method="post">
+        <input type="text" name="username" id="inputName" class="form-control" placeholder="Account No." required autofocus>      
+      </form>
+      <a href="main"> <button id="btnSignUp" type="button" href="main" >Login</button> </a>
 </div>
 </body>
 </html>
