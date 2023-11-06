@@ -1,0 +1,25 @@
+.AllCompanies
+{
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    flex-direction: column;
+}
+.card
+{
+    height: 14vh;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: aqua;
+    margin: 1vh;
+    padding: 1vh;
+    border-radius: 1vh;
+}
+
+.element
+{
+    margin: 0.5vh;
+}

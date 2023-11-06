@@ -4,15 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WealthTrack</title>
+    <link href="../static/view.css" rel="stylesheet">
 </head>
 <body>
     <header></header>
-    <container>
+    <container class="AllCompanies">
         {% for card in data %}
         <div class="card">
-            <h3>{{ card.Name }}</h3>
-            <p>Symbol: {{ card.FolioNo }}</p>
-            <p>Price: ${{ card.Price }}</p>
+            <h3 class="element">{{ card.Name }}</h3>
+            <p class="element">Advisor: {{ card.Advisor }}</p>
+            <p class="element">Folio No: {{ card.FolioNo }}</p>
+            <p class="element">Scheme Name: {{ card.SchemeName }}</p>
+            <p class="element">Quantity: {{ card.Quantity }}</p>
+            <p class="element">Amount: ₹{{ card.Amount }}</p>
+            <p class="element">Price: ₹{{ card.Price }}</p>
+            <p class="element">Date of Investment: {{ card.DateOfInvestment }}</p>
+            <p class="element">Current Value: {{ card.CurrentValue }}</p>
         </div>
         {% endfor %}
     </container>
